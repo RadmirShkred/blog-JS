@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "Blog on native js",
   "main": "index.js",
+  "homepage": "https://radmirshkred.github.io/blog-JS",
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack --mode development",
-    "start": "webpack-dev-server --mode development --open"
+    "start": "webpack-dev-server --mode development --open",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [
     "js",
@@ -20,6 +23,7 @@
     "@babel/core": "^7.10.2",
     "@babel/preset-env": "^7.10.2",
     "babel-loader": "^8.1.0",
+    "gh-pages": "^3.1.0",
     "html-webpack-plugin": "^4.3.0",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
